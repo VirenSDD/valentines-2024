@@ -22,35 +22,40 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  /* Position the container relative to its normal position */
 }
 
-.timeline:before {
-  content: '';
+.timeline-line {
   position: absolute;
-  top: 0;
-  bottom: 0;
   left: 50%;
+  /* Position the line in the center */
   width: 2px;
+  height: 100%;
   background-color: #0066cc;
-  margin-left: -1px;
+  /* Color of the timeline line */
 }
 
 .timeline-event {
   position: relative;
-  padding: 20px;
+  /* Make events positioned relative to the timeline */
   margin-bottom: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
 }
 
 .timeline-event-date {
   font-size: 14px;
   color: #888;
+  min-width: 100px;
 }
 
 .timeline-event-content {
-  margin-top: 16px;
+  margin-left: 20px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-event-content h3 {
