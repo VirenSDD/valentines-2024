@@ -1,15 +1,8 @@
 /* timeline.css */
-.timeline-event {
-  position: relative;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: flex-start;
-}
-
 .timeline-event-date {
   font-size: 14px;
   color: #fff;
-  background-color: #0066cc;
+  background-color: #ff7e5f;
   padding: 8px;
   border-radius: 4px;
   min-width: 100px;
@@ -24,17 +17,22 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Add these styles for alternating sides */
-.timeline-event:nth-child(odd) {
-  flex-direction: row-reverse;
+.timeline-event-content h3 {
+  color: #ff7e5f;
+  /* Warm orange color */
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-.timeline-event:nth-child(odd) .timeline-event-date {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 4px;
+.timeline-event-content p {
+  color: #777;
+  /* Slightly darker text color for better contrast */
+  font-size: 14px;
+  line-height: 1.5;
 }
 
-.timeline-event:nth-child(odd) .timeline-event-content {
-  margin-left: 0;
-  margin-right: 20px;
+/* Optional: Adjust line color to complement the warm palette */
+.timeline-line {
+  background-color: #ff7e5f;
+  /* Warm orange color */
 }
