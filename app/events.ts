@@ -33,7 +33,7 @@ const events: Event[] = [
     date: '2023-11-29', title: 'Madrid', description: 'Carla y Viren quedan en Madrid para estar juntos en el comienzo de las Navidades. Hicieron planes más sencillos, pero igualmente especiales para ambos: ver una película juntos en casa (o intentarlo, porque Carla se dormía siempre), ir al cine, pasear por el centro de Madrid, ir a un espectáculo de luces, museos (Casa de Sorolla, El Prado), cocinar juntos...'
   },
   {
-    date: '2024-01-05', title: 'Reyes', description: 'Reyes Carla visitó Tenerife otra vez. Hicieron planes más familiares y Carla tuvo la suerte (o desgracia) de conocer a la familia y amigos de Viren. Además, Carla siguió explorando la maravillosa isla de Tenerife, con planes como un brunch con vistas al Teide, el Socorro, ver las estrellas, playa en Güímar...'
+    date: '2024-01-05', title: 'Reyes', description: 'Carla visitó Tenerife otra vez. Hicieron planes más familiares y Carla tuvo la suerte (o desgracia) de conocer a la familia y amigos de Viren. Además, Carla siguió explorando la maravillosa isla de Tenerife, con planes como un brunch con vistas al Teide, el Socorro, ver las estrellas, playa en Güímar...'
   },
 ];
 
