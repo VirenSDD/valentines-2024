@@ -1,5 +1,6 @@
 // components/Timeline.tsx
 import React from 'react';
+import '../styles/timeline.css'
 
 interface TimelineEvent {
   formattedDate: string;
