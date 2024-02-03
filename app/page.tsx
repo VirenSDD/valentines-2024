@@ -16,6 +16,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h1>Línea temporal Carla y Viren</h1>
+      <br></br>
       <Timeline events={eventsWithFormattedDates} />
     </div>
   );

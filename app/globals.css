@@ -13,3 +13,13 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
+h1 {
+  color: #ff7e5f;
+  /* Warm orange color */
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  /* Center align the h1 element */
+}

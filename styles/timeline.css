@@ -1,8 +1,36 @@
 /* timeline.css */
+.timeline-container {
+  max-width: 800px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #ff7e5f;
+  /* Warm orange color */
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
 .timeline-event-date {
   font-size: 14px;
   color: #fff;
   background-color: #ff7e5f;
+  /* Warm orange color */
   padding: 8px;
   border-radius: 4px;
   min-width: 100px;
@@ -31,8 +59,16 @@
   line-height: 1.5;
 }
 
-/* Optional: Adjust line color to complement the warm palette */
-.timeline-line {
-  background-color: #ff7e5f;
-  /* Warm orange color */
+.timeline-event:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-event:nth-child(even) .timeline-event-date {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 4px;
+}
+
+.timeline-event:nth-child(even) .timeline-event-content {
+  margin-left: 0;
+  margin-right: 20px;
 }
