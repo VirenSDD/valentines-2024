@@ -3,12 +3,19 @@ import React from 'react';
 import Timeline from '../components/timeline';
 import events from './events';
 
+interface Event {
+  date: string;
+  title: string;
+  description: string;
+}
+
 const Home: React.FC = () => {
   const formatDate = (dateString: string): string => {
     return new Date(dateString).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
-  const eventsWithFormattedDates = events.map((event) => ({
+
+  const eventsWithFormattedDates = events.map((event: Event) => ({
     ...event,
     formattedDate: formatDate(event.date),
   }));

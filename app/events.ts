@@ -4,37 +4,22 @@ interface Event {
   description: string;
 }
 
-const events: Event[] = [
-  {
-    date: '2023-04-29', title: 'Primera conversación', description: 'Viren estuvo 1 hora pensando qué responder a una historia de Carla. Menos mal que después subió otra de La La Land...'
-  },
-  {
-    date: '2023-05-18', title: 'Números de teléfono', description: 'Viren le pidió el número de teléfono a Carla. Seguro que enumerar las ventajas de usar WhatsApp frente a Instagram la convenció para dárselo.'
-  },
-  {
-    date: '2023-06-05', title: 'Primera cita', description: 'Carla le pidió a Viren una cita. Comieron en un restaurante indio, dieron un paseo por el centro y el Turia, fue increíble. Por desgracia, Viren fue tonto y no acabó muy bien...'
-  },
-  {
-    date: '2023-06-07', title: 'Primer beso', description: 'A pesar de todo, Carla y Viren volvieron a quedar a solas después de hablar. Carla se compró algo para merendar y Viren una Coca-Cola Zero y se sentaron en un banco. Ya se pueden imaginar lo que pasó después...'
-  },
-  {
-    date: '2023-09-13', title: 'Tenerife', description: 'Primer viaje de Carla a Tenerife. Este viaje fue increíblemente especial y pasaron muchísimas cosas, empezando por tomar un café en Santa Cruz. Las fiestas en La Laguna (el parque de la Constitución), el norte (Orotava, Puerto, Garachico), el guachinche, el sur (Candelaria, Caletillas, El Médano, acantilado de Las Américas), el Teide, Anaga, La Punta, El Sauzal, el Gato Goloso, Como en Casa...'
-  },
-  {
-    date: '2023-09-21', title: 'Empezaron a salir', description: 'Viren la había liado (de nuevo) y estaba perdidamente enamorado de Carla. Necesitaba pedirle salir de una manera especial, por lo que encargó un ramo de flores y le hizo una página web a Carla, que consistía en un cuestionario. La última pregunta era "¿Quieres salir conmigo?".'
-  },
-  {
-    date: '2023-10-05', title: 'Patraix', description: 'Viren se iba a la India durante un mes, y no podía irse sin antes ver a Carla. Alquilaron un Airbnb en Patraix e hicieron muchos planes especiales, aunque Viren tuviera que trabajar los dos primeros días. Viren conoció a las hermanas de Carla en persona (Belén y Candela). También hubo cena con los compañeros de uni de Carla, paseo por el centro, exposición de Pixar en el Museo de las Ciencias, horchata y fartón en Orxata Daniel, Port Saplaya, William...'
-  },
-  {
-    date: '2023-10-16', title: 'Te quiero...', description: 'Viren comienza su viaje a Dubai y la India, pero tiene que quedarse una noche en Madrid. Carla y Viren hablan por videollamada, y al despedirse a Viren le sale de manera natural un "te quiero" y Carla responde instintivamente "yo también". Es la primera vez que se lo dicen.'
-  },
-  {
-    date: '2023-11-29', title: 'Madrid', description: 'Carla y Viren quedan en Madrid para estar juntos en el comienzo de las Navidades. Hicieron planes más sencillos, pero igualmente especiales para ambos: ver una película juntos en casa (o intentarlo, porque Carla se dormía siempre), ir al cine, pasear por el centro de Madrid, ir a un espectáculo de luces, museos (Casa de Sorolla, El Prado), cocinar juntos...'
-  },
-  {
-    date: '2024-01-05', title: 'Reyes', description: 'Carla visitó Tenerife otra vez. Hicieron planes más familiares y Carla tuvo la suerte (o desgracia) de conocer a la familia y amigos de Viren. Además, Carla siguió explorando la maravillosa isla de Tenerife, con planes como un brunch con vistas al Teide, el Socorro, ver las estrellas, playa en Güímar...'
-  },
-];
+// Example function to fetch data from your backend
+async function fetchLoveDates() {
+  try {
+    const response = await fetch('https://valentines-2024-backend.vercel.app/api/v1/love-dates');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+    return null;
+  }
+}
+
+const loveDatesResponse = await fetchLoveDates()
+const events = loveDatesResponse.loveDates
 
 export default events;
