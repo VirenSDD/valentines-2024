@@ -1,10 +1,4 @@
-interface Event {
-  date: string;
-  title: string;
-  description: string;
-}
 
-// Example function to fetch data from your backend
 async function fetchLoveDates() {
   try {
     const response = await fetch('https://valentines-2024-backend.vercel.app/api/v1/love-dates');
