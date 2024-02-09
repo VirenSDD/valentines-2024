@@ -21,8 +21,12 @@ const RegistrationForm = () => {
     e.preventDefault();
     // Handle form submission here, e.g., send data to backend
     console.log(formData);
-    const body = JSON.stringify({ ...formData, id: formData.date })
-    const response = await fetch('https://valentines-2024-backend.vercel.app/api/v1/love-dates', { method: 'POST', body: body })
+    const url = new URL("https://valentines-2024-backend.vercel.app/api/v1/love-dates")
+    const params = new URLSearchParams({ id: formData.date, title: formData.title, description: formData.description, date: formData.date });
+
+    url.search = params.toString()
+
+    const response = await fetch(url, { method: 'POST' })
     console.log(response)
   };
 
