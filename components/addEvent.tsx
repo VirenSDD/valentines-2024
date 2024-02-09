@@ -1,8 +1,10 @@
 'use client'
+import { useRouter } from 'next/router';
 // components/RegistrationForm.tsx
 import React, { useState } from 'react';
 
 const RegistrationForm = () => {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -28,6 +30,8 @@ const RegistrationForm = () => {
 
     const response = await fetch(url, { method: 'POST' })
     console.log(response)
+
+    router.reload()
   };
 
   return (
