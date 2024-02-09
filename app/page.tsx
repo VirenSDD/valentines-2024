@@ -2,6 +2,7 @@
 import React from 'react';
 import Timeline from '../components/timeline';
 import events from './events';
+import AddEventForm from '../components/addEvent';
 
 interface Event {
   date: string;
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
       <h1>Línea temporal Carla y Viren</h1>
       <br></br>
       <Timeline events={eventsWithFormattedDates} />
+      <AddEventForm />
     </div>
   );
 };
