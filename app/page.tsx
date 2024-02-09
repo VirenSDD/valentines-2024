@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       <h1>Línea temporal Carla y Viren</h1>
       <br></br>
       <Timeline events={eventsWithFormattedDates} />
-      <AddEventForm />
+      {/* <AddEventForm /> */}
     </div>
   );
 };
